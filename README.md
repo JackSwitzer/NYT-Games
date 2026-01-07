@@ -1,20 +1,42 @@
 # NYT Games Solver
 
-A Python tool that solves New York Times word games: Spelling Bee and Letter Boxed.
+A Python tool that solves New York Times word games, with plans for a full web UI.
 
-## Features
+![Letter Boxed Solution](letter_boxed_solution.png)
 
-- Solves NYT Spelling Bee puzzles
-- Solves NYT Letter Boxed puzzles
-- Displays results grouped by word length
-- Uses an extensive English word dictionary
+## Current Features
+
+- ✅ **Spelling Bee** solver
+- ✅ **Letter Boxed** solver
+- ✅ Results grouped by word length
+- ✅ Extensive English word dictionary
+
+## Roadmap
+
+### Phase 1: Additional Games
+- [ ] **Wordle** - 5-letter word guessing with feedback optimization
+- [ ] **Connections** - Group 16 words into 4 categories
+- [ ] **Strands** - Theme-based word search
+
+### Phase 2: Web UI
+- [ ] React/Next.js frontend
+- [ ] Interactive puzzle input
+- [ ] Visual solution display
+- [ ] Daily puzzle auto-fetch
+- [ ] Solution history/stats
+
+### Phase 3: Enhancements
+- [ ] Better word corpus (closer to NYT's dictionary)
+- [ ] Solver strategy explanations
+- [ ] Mobile-responsive design
+- [ ] PWA support
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
-cd nyt-games-solver
+git clone https://github.com/jackswitzer/NYT-Games.git
+cd NYT-Games
 ```
 
 2. Create and activate a virtual environment:
@@ -32,7 +54,7 @@ pip install -r requirements.txt
 
 ### Spelling Bee
 
-1. Create a JSON configuration file in `Data/GameData/SB/Daily/` with format:
+1. Create a JSON configuration file in `Data/GameData/SB/Daily/`:
 ```json
 {
     "mandatory_char": "o",
@@ -47,7 +69,7 @@ python main.py SB
 
 ### Letter Boxed
 
-1. Create a JSON configuration file in `Data/GameData/LB/Daily/` with format:
+1. Create a JSON configuration file in `Data/GameData/LB/Daily/`:
 ```json
 {
     "sides": ["abc", "def", "ghi", "jkl"]
@@ -73,7 +95,10 @@ python main.py LB
 - Letters can be reused
 - Words must be 3+ letters long
 
-## Next Steps
-better data - more like the NYT corpus
-better visualizatio
-more games
+## Contributing
+
+Contributions welcome! See the roadmap above for planned features.
+
+## License
+
+MIT
